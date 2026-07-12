@@ -13,18 +13,7 @@ migrate = Migrate()
 jwt = JWTManager()
 
 bcrypt = Bcrypt()
-
-cors = CORS(
-    resources={
-        r"/*": {
-            "origins": [
-                "http://localhost:5173",
-                "https://codity-ai-67bb.vercel.app",
-            ]
-        }
-    },
-    supports_credentials=True
-)
+cors = CORS()
 
 limiter = Limiter(
     key_func=get_remote_address,
