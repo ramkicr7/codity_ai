@@ -3,23 +3,23 @@ import { Toaster } from "react-hot-toast";
 
 import { AuthProvider } from "./components/auth/AuthContext";
 
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
 
-import DashboardLayout from "./layouts/DashboardLayout";
+import DashboardLayout from "./layouts/DashboardLayout.jsx";
 
-import ProtectedRoute from "./routes/ProtectedRoute";
-import PublicRoute from "./routes/PublicRoute";
+import ProtectedRoute from "./routes/ProtectedRoute.jsx";
+import PublicRoute from "./routes/PublicRoute.jsx";
 
 /* ================= PAGES ================= */
-import Dashboard from "./pages/Dashboard";
-import Projects from "./pages/Projects";
-import Jobs from "./pages/Jobs";
-import Workers from "./pages/Workers";
-import Queues from "./pages/Queues";
-import Analytics from "./pages/Analytics";
-import Settings from "./pages/Settings";
-import Profile from "./pages/Profile";
+import Dashboard from "./pages/Dashboard.jsx";
+import Projects from "./pages/Projects.jsx";
+import Jobs from "./pages/Jobs.jsx";
+import Workers from "./pages/Workers.jsx";
+import Queues from "./pages/Queues.jsx";
+import Analytics from "./pages/Analytics.jsx";
+import Settings from "./pages/Settings.jsx";
+import Profile from "./pages/Profile.jsx";
 
 export default function App() {
     return (
