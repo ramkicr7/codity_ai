@@ -14,20 +14,18 @@ jwt = JWTManager()
 
 bcrypt = Bcrypt()
 
-
-from flask_cors import CORS
-
 cors = CORS(
     resources={
-        r"/api/*": {
+        r"/*": {
             "origins": [
                 "http://localhost:5173",
-                "https://codity-ai-e751-seven.vercel.app"
+                "https://codity-ai-67bb.vercel.app",
             ]
         }
     },
     supports_credentials=True
 )
+
 limiter = Limiter(
     key_func=get_remote_address,
     default_limits=[]
