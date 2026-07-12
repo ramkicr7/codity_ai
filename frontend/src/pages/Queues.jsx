@@ -19,9 +19,8 @@ export default function Queues() {
   const [editingId, setEditingId] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
-  const API = "http://localhost:5000/api/queues";
-  const PROJECT_API = "http://localhost:5000/api/projects";
-
+const API = `${import.meta.env.VITE_API_BASE_URL}/queues`;
+const PROJECT_API = `${import.meta.env.VITE_API_BASE_URL}/projects`;
   // ==========================
   // FETCH QUEUES
   // ==========================
