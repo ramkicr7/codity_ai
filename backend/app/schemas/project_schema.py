@@ -21,8 +21,9 @@ class ProjectSchema(Schema):
     )
 
     organization_id = fields.UUID(
-        required=True
-    )
+    required=False,
+    load_default=None
+)
 
     created_at = fields.DateTime(
         dump_only=True
