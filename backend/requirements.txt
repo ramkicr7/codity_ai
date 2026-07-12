@@ -9,3 +9,4 @@ python-dotenv
 psycopg2-binary
 marshmallow
 SQLAlchemy
+gunicorn==23.0.0
