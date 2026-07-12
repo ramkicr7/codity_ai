@@ -67,6 +67,7 @@ def create_app():
     bcrypt.init_app(app)
     cors.init_app(app)
     limiter.init_app(app)
+    
 
     app.register_blueprint(auth_bp, url_prefix="/api/auth")
     app.register_blueprint(organization_bp, url_prefix="/api/organizations")

@@ -91,8 +91,6 @@ export default function ProjectModal({ isOpen, onClose, onSubmit, isSubmitting }
       await onSubmit({
     name: values.name.trim(),
     description: values.description.trim(),
-    organization_id:
-        "595c963e-31fb-45bf-ac49-9974aa628d40",
 });
       onClose();
     } catch {

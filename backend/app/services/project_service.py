@@ -2,6 +2,7 @@ from marshmallow import ValidationError
 
 from app.repositories.project_repository import ProjectRepository
 from app.schemas.project_schema import ProjectSchema
+from app.models.organization import Organization
 
 
 class ProjectService:
@@ -56,6 +57,21 @@ class ProjectService:
                 "message": "Validation failed.",
                 "errors": err.messages
             }, 400
+
+        # ==========================
+        # Automatically use the first Organization
+        # ==========================
+
+        organization = Organization.query.first()
+
+        if organization is None:
+
+            return {
+                "success": False,
+                "message": "No organization found. Please create an organization first."
+            }, 400
+
+        validated_data["organization_id"] = organization.id
 
         project = ProjectRepository.create(validated_data)
 
